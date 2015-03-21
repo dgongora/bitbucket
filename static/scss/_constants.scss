@@ -1,0 +1,45 @@
+//NUMBERS
+$font-alpha: 0.7;
+
+//SIZES
+$em-base: 10px;
+$header-height: rem(30);
+
+$panel-title-padding: 0.7rem;
+$panel-title-font-size: 1.3rem;
+$panel-title-height: 2*$panel-title-padding +
+                     $panel-title-font-size;
+$box-margin: 1rem;
+$box-border-radius: 0.1rem;
+$box-shadow-dimensions: 0rem 0.1rem 0rem 0rem;
+$box-padding: 1rem;
+
+//COLORS
+$c-background: #EDECEA;
+$c-control-face: lighten(#dfdfdf, 10%);
+$c-control-font: rgba(black, $font-alpha);
+$c-white-font: rgba(white, $font-alpha);
+$c-shade: rgba(black, 0.6);
+
+    //app-header
+    $c-control-face-light: lighten($c-control-face, 5%);
+    $c-control-face-dark: darken($c-control-face, 5%);
+    $c-control-border: darken($c-control-face, 20%);
+    $c-header-shadow: #4B4B4B;
+
+    //main-menu
+    $c-main-menu: darken($c-control-face, 80%);
+    $c-main-menu-font: rgba(white, $font-alpha);
+    
+    //panels
+    $c-panel: #EDECEA;
+    $c-panel-title: #78a4d7;
+    
+    //boxes
+    $c-box: white;
+    $c-box-shadow: #c9c9c9;
+
+//Z INDEXES
+$zi-header: 5000;
+$zi-main-menu: 4000;
+$zi-panels: 3000;

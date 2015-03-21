@@ -1,0 +1,88 @@
+@import "bourbon_files/bourbon";
+@import "constants";
+
+#content-shade {
+    display: block;
+    @include position(fixed, 0px 0px 0px 0px);
+    z-index: $zi-panels - 1;
+    background-color: transparent;
+/*    @include transition(background-color 0.2s);*/
+}
+
+#notifications {
+    @include display(flex);
+    @include size(auto $header-height);
+    @include align-items(center);
+}
+
+.header-button {
+    @include size($header-height);
+    border: none;
+    background-color: transparent;
+    background-image: none;
+
+    img, svg {
+        @include size($header-height*0.7);
+        vertical-align: middle;
+    }
+}
+
+#main-menu-button {
+    @extend .header-button;
+    display: none;
+}
+
+.notification {
+    @extend .header-button
+}
+
+#main-menu {
+    display: block;
+    @include position(fixed, 0px null 0px
+                      -200vw/3);
+    z-index: $zi-main-menu;
+    padding: $header-height 0.5rem 0rem;
+    width: (200vw/3);
+    background-color: $c-main-menu;
+    color: $c-main-menu-font;
+/*    @include transition(left 0.2s);*/
+}
+
+.main-menu-item {
+    display: block;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    background-color: transparent;
+    text-align: left;
+    font-size: 1rem;
+    color: $c-main-menu-font;
+    border-bottom: 1px solid $c-main-menu-font;
+}
+
+.main-menu-item:active {
+    background-color: rgba($c-control-face, 0.2);
+}
+
+.box {
+    display: block;
+    margin: $box-margin;
+    border: none;
+    border-radius: $box-border-radius;
+    box-shadow: $box-shadow-dimensions $c-box-shadow;
+    background-color: $c-box;
+    padding: $box-padding;
+    text-align: justify;
+}
+
+#message-bubble {
+    @include position(fixed, $header-height 0px auto auto);
+    z-index: $zi-panels - 1;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+    max-width: (100vw/3);
+    background-color: rgba($c-main-menu, 0.8);
+    padding: 0.5rem;
+    color: $c-white-font;
+    opacity: 0;
+}
